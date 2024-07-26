@@ -13,10 +13,26 @@ export default function AppNavigator() {
   return (
     <NavigationContainer>
       <Tab.Navigator initialRouteName="HomeScreen">
-        <Tab.Screen name="HomeScreen" component={HomeScreen} />
-        <Tab.Screen name="DetailsScreen" component={DetailsScreen} />
-        <Tab.Screen name="PropertyOwnersScreen" component={PropertyOwnersScreen} />
-        <Tab.Screen name="RentersScreen" component={RentersScreen} />
+        <Tab.Screen
+          name="HomeScreen"
+          component={HomeScreen}
+          options={{ headerShown: false, tabBarLabel: 'Home' }}
+        />
+        <Tab.Screen
+          name="DetailsScreen"
+          component={DetailsScreen}
+          options={{ tabBarLabel: 'Details', headerShown: false }}
+        />
+        <Tab.Screen
+          name="PropertyOwnersScreen"
+          component={PropertyOwnersScreen}
+          options={{ tabBarLabel: 'Property Owners', headerShown: false }}
+        />
+        <Tab.Screen
+          name="RentersScreen"
+          component={RentersScreen}
+          options={{ tabBarLabel: 'Renters', headerShown: false }}
+        />
       </Tab.Navigator>
     </NavigationContainer>
   );
